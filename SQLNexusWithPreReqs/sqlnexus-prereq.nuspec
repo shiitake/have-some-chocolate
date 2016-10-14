@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>textpad</id>    
+    <version>8.0.2</version>    
+    <title>TextPad 8 (Install)</title>
+    <authors>Helios Software Solutions</authors>    
+    <projectUrl>http://textpad.com</projectUrl>    
+    <tags>textpad helios text editor</tags>
+    <summary>A general purpose text editor</summary>
+    <description>TextPad is a powerful, general purpose editor for plain text files. </description>    
+  </metadata>
+  <files>    
+    <file src="tools\**" target="tools" />    
+  </files>
+</package>
