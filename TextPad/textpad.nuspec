@@ -3,11 +3,14 @@
   <metadata>
     <id>textpad</id>    
     <version>8.0.2</version>    
-    <title>TextPad 8 (Install)</title>
-    <authors>Helios Software Solutions</authors>    
+    <title>TextPad</title>
+    <authors>Helios Software Solutions</authors>
+    <owners>Shannon Barrett</owners>    
     <projectUrl>http://textpad.com</projectUrl>    
-    <tags>textpad helios text editor</tags>
+    <tags>textpad helios text editor admin</tags>
     <summary>A general purpose text editor</summary>
+    <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
+    <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>    
   </metadata>
   <files>    
