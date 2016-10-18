@@ -12,24 +12,16 @@ $fileLocation = Join-Path $toolsDir 'setup.exe'
 
 $packageArgs = @{
   packageName   = $packageName
-  unzipLocation = $toolsDir  
+  filefullpath  = $downloadedZip   
   url           = $url
   url64bit      = $url64
-  file         = $fileLocation
-  filefullpath  = $downloadedZip
-
-  softwareName  = 'TextPad*'
-
   checksum      = '448AB57625EA1B04911DFAACEC86DFBA'
   checksumType  = 'md5'
   checksum64    = 'F9471BD53B2987267F45AD5768B4E2BC'
-  checksumType64= 'md5'
-
-  silentArgs   = '/s /v""/qn""'
+  checksumType64= 'md5'  
 }
 
-
-Get-ChocolateyWebFile $packageName $downloadedZip $url $url64
+Get-ChocolateyWebFile @packageArgs
 
 
 Get-ChocolateyUnzip -FileFullPath $downloadedZip -Destination $toolsDir
