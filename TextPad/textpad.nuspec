@@ -6,8 +6,8 @@
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>    
-    <projectUrl>http://textpad.com</projectUrl>    
-    <tags>textpad helios text editor admin</tags>
+    <projectUrl>http://textpad.com/products/textpad/index.html</projectUrl> 
+    <tags>textpad helios text editor admin trial</tags>
     <summary>A general purpose text editor</summary>
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
