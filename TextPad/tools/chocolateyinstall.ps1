@@ -4,21 +4,21 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'TextPad'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://textpad.com/download/v80/win32/txpeng802-32.zip'
-$url64      = 'http://textpad.com/download/v80/x64/txpeng802-64.zip'
+$url        = 'http://textpad.com/download/v81/win32/txpeng812-32.zip'
+$url64      = 'http://textpad.com/download/v81/x64/txpeng812-64.zip'
 $downloadedZip = Join-Path $toolsDir 'textpad.zip'
 $fileLocation = Join-Path $toolsDir 'setup.exe'
 
 
 $packageArgs = @{
   packageName   = $packageName
-  filefullpath  = $downloadedZip   
+  filefullpath  = $downloadedZip
   url           = $url
   url64bit      = $url64
-  checksum      = '448AB57625EA1B04911DFAACEC86DFBA'
+  checksum      = '796A189374AEABE78832A15A85BC5292'
   checksumType  = 'md5'
-  checksum64    = 'F9471BD53B2987267F45AD5768B4E2BC'
-  checksumType64= 'md5'  
+  checksum64    = '4220EF8951C26A358F2FBEC6E7E2395C'
+  checksumType64= 'md5'
 }
 
 Get-ChocolateyWebFile @packageArgs

@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>textpad</id>    
-    <version>8.0.2</version>    
+    <id>textpad</id>
+    <version>8.1.2</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
-    <owners>Shannon Barrett</owners>    
-    <projectUrl>http://textpad.com/products/textpad/index.html</projectUrl> 
+    <owners>Shannon Barrett</owners>
+    <projectUrl>http://textpad.com/products/textpad/index.html</projectUrl>
     <tags>textpad helios text editor admin trial</tags>
     <summary>A general purpose text editor</summary>
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
-    <description>TextPad is a powerful, general purpose editor for plain text files. </description>    
+    <description>TextPad is a powerful, general purpose editor for plain text files. </description>
   </metadata>
-  <files>    
-    <file src="tools\**" target="tools" />    
+  <files>
+    <file src="tools\**" target="tools" />
   </files>
 </package>
