@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>redis-desktop-manager</id>
+    <version>0.8.8.384</version>
+    <title>Redis Desktop Manager</title>
+    <authors>Igor Malinovskiy</authors>
+    <owners>Shannon Barrett</owners>
+    <projectUrl>https://redisdesktop.com/</projectUrl>
+    <tags>redis redisdesktop rdm db</tags>
+    <summary>A GUI database management application for Redis DB</summary>
+    <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/redisdesktopmanager/icon.png</iconUrl>
+    <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
+    <description>Redis Desktop Manager is an open source Redis GUI management tool for Windows, Mac OS X, Ubuntu and Debian. </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
