@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>reason</id>
+    <version>10.4.1</version>
+    <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
+    <owners>Shannon Barrett</owners>    
+    <title>Reason (Install)</title>
+    <authors>Reason Studios</authors>
+    <projectUrl>https://www.reasonstudios.com</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/shiitake/have-some-chocolate/master/Reason/reason-icon.png</iconUrl>
+    <licenseUrl>https://www.reasonstudios.com/agreements#eula</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>reason propellerhead</tags>
+    <summary>A digital audio workstation for creating and editing music and audio.</summary>
+    <description>This is the limited trial version of Reason. You will need a valid Reason account to use the software. Reason emulates a rack of hardware synthesizers, samplers, signal processors, sequencers, and mixers, all of which can be freely interconnected in an arbitrary manner. Reason can be used either as a complete virtual music studio or as a set of virtual instruments to be used with other sequencing software in a fashion that mimics live performance. </description>
+  </metadata>
+  <files>    
+    <file src="tools\**" target="tools" />    
+  </files>
+</package>
