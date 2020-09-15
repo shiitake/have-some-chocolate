@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>8.4.1</version>
+    <version>8.4.2</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,17 +12,16 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.4.1 (28-May-2020)##
+    <releaseNotes>##TextPad 8.4.2 (07-May-2020)##
       Issues resolved:
 
-    * Polish UI and spell checker.
-    * Improvements to the Italian UI.
-    * Macros which did a lot of copying and pasting could be interrupted, because the clipboard could not service the requests quickly enough.
-    * Uncommon crash opening files, reported by 2 users.
-    Crash doing replace all of '^' with anything, when the last line of the document is empty.
-    * When doing replace all '^' with anything, lines following blank lines were not changed.
-    * Crash when TextPad is forcibly closed by signing out of Windows.
-    * Help did not link to documentation for comparing files visually.
+
+    * The Ordering Information button on the Help dialog box did not work.
+    * Fixed crash when the clipboard history was active, but TextPad was in the background.
+    * The Open File dialog box could create files without a confirmation prompt.
+    * The accessibility setting for the width of the text cursor was ignored.
+    * The background color of text for the Compare Files document class was ignored.
+    * Made some corrections to the Polish user interface.
     </releaseNotes>
   </metadata>
   <files>
