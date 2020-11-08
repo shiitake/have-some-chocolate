@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>8.4.2</version>
+    <version>8.5.0</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,16 +12,20 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.4.2 (07-May-2020)##
-      Issues resolved:
+    <releaseNotes>##TextPad 8.5.0 (24-Sept-2020)##
+Enhancements:
 
+* Zooming is implemented with default shortcuts Ctrl + and Ctrl -. This can also be done using the new zoom toolbar. The default font size can be reinstated with Ctrl 0.
+* In the File Preferences, there is a new option to save the list of recently used files in workspaces.
+* The Save As dialog is now redisplayed when save is cancelled due to a character encoding conversion error.
+* The setting for visual file comparisons is persisted between sessions.
 
-    * The Ordering Information button on the Help dialog box did not work.
-    * Fixed crash when the clipboard history was active, but TextPad was in the background.
-    * The Open File dialog box could create files without a confirmation prompt.
-    * The accessibility setting for the width of the text cursor was ignored.
-    * The background color of text for the Compare Files document class was ignored.
-    * Made some corrections to the Polish user interface.
+Issues resolved:
+
+* CSS syntax highlighting was lost after closing all open .css files, then opening one.
+* The installation directory of JDK 14 was not detected.
+* Tool output buffering prevented display of text a line at a time.
+* The option to choose which instance of TextPad to open a file with was not added to Explorer's context menu.
     </releaseNotes>
   </metadata>
   <files>
