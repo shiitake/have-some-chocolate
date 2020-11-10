@@ -4,8 +4,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'TextPad'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://textpad.com/download/v81/win32/txpeng812-32.zip'
-$url64      = 'http://textpad.com/download/v81/x64/txpeng812-64.zip'
+$url        = 'https://www.textpad.com/file?path=v81/win32/txpeng812-32.zip'
+$url64      = 'https://www.textpad.com/file?path=v81/x64/txpeng812-64.zip'
 $downloadedZip = Join-Path $toolsDir 'textpad.zip'
 $fileLocation = Join-Path $toolsDir 'setup.exe'
 
