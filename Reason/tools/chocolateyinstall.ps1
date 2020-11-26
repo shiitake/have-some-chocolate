@@ -2,9 +2,9 @@
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://cdn.propellerheads.se/Reason10/Reason_1040_d4.zip' 
-$downloadedZip = Join-Path $toolsDir 'Reason_1040_d4.zip'
-$fileLocation = Join-Path $toolsDir 'Install Reason 10.exe'
+$url        = 'https://a.phcdn.se/update/Stable/Reason_1135_d22-Stable-142-Win.zip' 
+$downloadedZip = Join-Path $toolsDir 'Reason_1135_d22-Stable-142-Win.zip'
+$fileLocation = Join-Path $toolsDir 'Install Reason 11.exe'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -13,7 +13,7 @@ $packageArgs = @{
   fileType      = 'exe'
   url           = $url  
   softwareName  = 'Reason' 
-  checksum      = 'D2619016AFD7901E3931ECDF98C0D376E76B4FCCE516962B34E67CD87483AC37'
+  checksum      = '631B872766B7A5C6BC41EF530B2764AE30179334D345290A5EA3C878AA870981'
   checksumType  = 'sha256'  
   validExitCodes= @(0) 
 }
