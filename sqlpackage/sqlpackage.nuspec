@@ -1,17 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>    
-    <id>sqlpackage</id>    
-    <version>18.5.1</version>
-    <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>    
-    <owners>Shannon Barrett</owners>    
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>sqlpackage</id>
+    <version>18.6</version>
     <title>SqlPackage</title>
-    <authors>Microsoft</authors>    
-    <projectUrl>https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-ver15</projectUrl>
-    <docsUrl>https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-ver15</docsUrl>    
-    <tags>sqlpackage dacfx </tags>
+    <authors>Microsoft</authors>
+    <owners>Shannon Barrett</owners>
     <licenseUrl>https://docs.microsoft.com/en-us/legal/sql/data-tier-application-framework-license-terms</licenseUrl>
-    <summary>SqlPackage is a command-line utility that automates database development tasks</summary>
+    <projectUrl>https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-ver15</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>SqlPackage.exe is a command-line utility that automates the following database development tasks:
       * Extract: Creates a database snapshot (.dacpac) file from a live SQL Server or Azure SQL Database.
       * Publish: Incrementally updates a database schema to match the schema of a source .dacpac file. If the database does not exist on the server, the publish operation creates it. Otherwise, an existing database is updated.
@@ -19,10 +16,31 @@
       * Import: Imports the schema and table data from a BACPAC package into a new user database in an instance of SQL Server or Azure SQL Database.
       * DeployReport: Creates an XML report of the changes that would be made by a publish action.
       * DriftReport: Creates an XML report of the changes that have been made to a registered database since it was last registered.
-      * Script: Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.
-    </description>    
+      * Script: Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.</description>
+    <summary>SqlPackage is a command-line utility that automates database development tasks</summary>
+    <releaseNotes># Features
+
+ - Platform: Updated sqlpackage for .NET Core version to .NET Core 3.1
+ - Always Encrypted: Added support for secure enclave import and export for SQL Server 2019
+ - Deployment: Added support to ignore change data capture enabled tables when exporting from Azure SQL Database
+ - Deployment: Added support for index option OPTIMIZE_FOR_SEQUENTIAL_KEY in Azure SQL Database
+ - Deployment: Added support for identity columns for Azure Synapse Analytics
+ - Help: Output the sqlpackage version in the help (/?) and support the /version parameter
+
+# Fixes
+
+ - Deployment: Fixed an incorrect deployment script generated when targeting Azure SQL Managed Instance as a non-sysadmin user
+ - Deployment: Fixed loading deployment contributors when running script actions
+ - Help: Output correct elapsed time in sqlpackage when operation take longer than 1 day
+ - Deployment: Fixed dacpac registration when deploying for .NET Core
+ - Deployment: Fixed sqlpackage on .NET Core handling of the /accessToken (/at) parameter
+ - Deployment: Allow ALTER TABLE statements in stored procedures as non-top level statements
+ - Deployment: Fixed Azure Synapse Analytics validation of materialized views to be case insensitive
+
+# Known Issues
+ - Deployment: The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported</releaseNotes>
+    <tags>sqlpackage dacfx</tags>
+    <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
+    <docsUrl>https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-ver15</docsUrl>
   </metadata>
-  <files>    
-    <file src="tools\**" target="tools" />    
-  </files>
 </package>
