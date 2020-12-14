@@ -1,0 +1,8 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+sqlpackage.exe and its dependancies are dowloaded directly from the Microsoft website. The binaries are idential to the bineries readily available for download at the download url (https://docs.microsoft.com/en-us/sql/tools/sqlpackage-download?view=sql-server-ver15). In particular this package downloads the Windows .NET Core zip file (version 18.6; build 15.0.4891.1). 
+
+
+
