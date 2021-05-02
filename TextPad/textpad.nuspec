@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>8.5.1</version>
+    <version>8.6.1</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,14 +12,11 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.5.1 (21-Jan-2021)##
+    <releaseNotes>##TextPad 8.6.1 (11-Apr-2021)##
 Issues resolved:
 
-* Using the regular expression "^\n" to match empty lines and replace them with nothing did not delete all consecutive empty lines.
-* When opening files, 3-byte UTF-8 characters that straddled multiples of 4KB may have been replaced with "?".
-* Fixed rare crash with the EndOfWord keyboard command at the end of a line.
-* Detection of the location of the WIN32 SDK and MFC folders only worked on English versions of Windows.
-* You can now use the tab key to navigate to the URL on the About dialog box.
+* Crash while replacing all text in a selected range at the end of a document.
+* The replacement expression "\i{...}" output its results in reverse order.
     </releaseNotes>
   </metadata>
   <files>
