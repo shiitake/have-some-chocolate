@@ -17,6 +17,19 @@ Issues resolved:
 
 * Crash while replacing all text in a selected range at the end of a document.
 * The replacement expression "\i{...}" output its results in reverse order.
+
+TextPad 8.6.0 (05-Apr-2021)
+
+Enhancements:
+
+* Implemented a new command to repeat the last characters typed. Its default shortcut is Ctrl+. (dot).
+* Speeded up the Replace All command to split very long lines of text.
+* Updated the keywords in the C++ syntax definition file for conformance with version 20.
+
+Issues resolved:
+
+* The Unicode code point U+FFFE is no longer treated as the end of a file.
+* Changes to Preferences were not written to disk until the program terminated.    
     </releaseNotes>
   </metadata>
   <files>
