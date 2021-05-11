@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>sqlpackage</id>
-    <version>18.6</version>
+    <version>18.7</version>
     <title>SqlPackage</title>
     <authors>Microsoft</authors>
     <owners>Shannon Barrett</owners>
@@ -18,27 +18,39 @@
       * DriftReport: Creates an XML report of the changes that have been made to a registered database since it was last registered.
       * Script: Creates a Transact-SQL incremental update script that updates the schema of a target to match the schema of a source.</description>
     <summary>SqlPackage is a command-line utility that automates database development tasks</summary>
-    <releaseNotes># Features
+    <releaseNotes># Features  
 
- - Platform: Updated sqlpackage for .NET Core version to .NET Core 3.1
- - Always Encrypted: Added support for secure enclave import and export for SQL Server 2019
- - Deployment: Added support to ignore change data capture enabled tables when exporting from Azure SQL Database
- - Deployment: Added support for index option OPTIMIZE_FOR_SEQUENTIAL_KEY in Azure SQL Database
- - Deployment: Added support for identity columns for Azure Synapse Analytics
- - Help: Output the sqlpackage version in the help (/?) and support the /version parameter
+ - Deployment:  Extract/Publish Big Data to/from Azure Storage. For more info, see SqlPackage for Big Data  
+ - Azure Synapse Analytics:  Row level security support (inline table valued function, security policy, security predicate)  
+ - Azure Synapse Analytics:  Workload classification support  
+ - Azure SQL Edge:  External streaming job support  
+ - Azure SQL Edge:  Added table and database options for data retention.  
+ - Import:  Added 2 new index option properties for import operation. DisableIndexesForDataPhase (Disable indexes before importing data into SQL Server, default true) and RebuildIndexesOfflineForDataPhase (Rebuild indexes offline after importing data into SQL Server, default false)  
+ - Logging:  Added property for all operations (HashObjectNamesInLogs) that will turn all object names into a hash string in log messages.  
+ - Performance:  Improvements to import and export performance, including additional logging to assist in determining additional bottlenecks.  
+ - SQLCMD:  Added property for Deployment and Schema Compare (DoNotEvaluateSqlCmdVariables) that specifies whether SQLCMD variables will be replaced with values.  
 
 # Fixes
 
- - Deployment: Fixed an incorrect deployment script generated when targeting Azure SQL Managed Instance as a non-sysadmin user
- - Deployment: Fixed loading deployment contributors when running script actions
- - Help: Output correct elapsed time in sqlpackage when operation take longer than 1 day
- - Deployment: Fixed dacpac registration when deploying for .NET Core
- - Deployment: Fixed sqlpackage on .NET Core handling of the /accessToken (/at) parameter
- - Deployment: Allow ALTER TABLE statements in stored procedures as non-top level statements
- - Deployment: Fixed Azure Synapse Analytics validation of materialized views to be case insensitive
+ - Deployment:  Default MAXDOP changed from 0 to 8 for Azure SQL, updating schema model default in DacFx  
+ - Schema Compare:  Stored procedures using OUT and OUTPUT keywords to be ignored as a difference  
+ - Deployment:  Additional validation for Big Data tokens  
+ - Build/Deployment:  Full schema model cleanup of temp external tables for final dacpac consistency.  
+ - Build/Deployment:  Adding error handling and fixing non-Edge 150 RE.  
+ - Import/Deployment:  Sequence value restored during deployment  
+ - Deployment:  Fixed an issue where changing the compression option on clustered index caused the table to be recreated instead of alter index.  
+ - Deployment:  Fixed an issue where a clustered columnstore index was dropped and recreated if table column changed.  
+ - Deployment:  Fixed external users getting dropped and recreated during deployment.  
+ - Schema Compare:  Fixed schema compare issue with external streaming job.  
+ - Import:  Null reference exception raised when enabling ambient setting ReliableDdlEnabled scripting a deployment report.  
+ - Deployment:  Fixed an issue where deployment steps containing system versioning would be created in the incorrect order.  
+ - Deployment:  Fixed an issue where schema compare update or dacpac deploy failed due to target containing temporal tables.  
+ - Deployment:  Reseeds identity value after deployment based on target's previous last value.  
 
-# Known Issues
- - Deployment: The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported</releaseNotes>
+# Known Issues  
+
+ - Deployment:  The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported  
+ - Deployment:  In an incremental deploy scenario when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procs etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table which is a pre-req for dropping the table, but the order of steps generated is incorrect. Workaround: Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script.</releaseNotes>
     <tags>sqlpackage dacfx</tags>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <docsUrl>https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-ver15</docsUrl>
