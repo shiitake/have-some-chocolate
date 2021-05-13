@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>8.6.1</version>
+    <version>8.7.0</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,7 +12,24 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.6.1 (11-Apr-2021)##
+    <releaseNotes>##TextPad 8.7.0 (12-May-2021)##
+Enhancements: 
+
+* Implemented an editor for keystroke macros.
+
+Issues resolved:
+
+* The Find Next command ignored the option to wrap searches when the cursor was at the end of file.  
+* The Extend Selection Down command did not work if the cursor was previously on a higher line number.  
+* A crash when displaying long system time formats in the status bar has been fixed.  
+* When the time was displayed on the status bar, it was partially obscured.  
+* The Replace All command took too long on files with many lines.  
+* Fixed a crash when paging down to the end of a word wrapped document, with critical combination of page size and font.  
+* The width of the space character increased, when viewing the properties of a document.  
+* The progress bar was not being updated while opening very large files.
+
+TextPad 8.6.1 (11-Apr-2021)
+
 Issues resolved:
 
 * Crash while replacing all text in a selected range at the end of a document.
