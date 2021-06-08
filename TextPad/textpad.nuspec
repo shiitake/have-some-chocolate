@@ -12,41 +12,19 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.7.0 (12-May-2021)##
-Enhancements: 
-
-* Implemented an editor for keystroke macros.
-
-Issues resolved:
-
-* The Find Next command ignored the option to wrap searches when the cursor was at the end of file.  
-* The Extend Selection Down command did not work if the cursor was previously on a higher line number.  
-* A crash when displaying long system time formats in the status bar has been fixed.  
-* When the time was displayed on the status bar, it was partially obscured.  
-* The Replace All command took too long on files with many lines.  
-* Fixed a crash when paging down to the end of a word wrapped document, with critical combination of page size and font.  
-* The width of the space character increased, when viewing the properties of a document.  
-* The progress bar was not being updated while opening very large files.
-
-TextPad 8.6.1 (11-Apr-2021)
-
-Issues resolved:
-
-* Crash while replacing all text in a selected range at the end of a document.
-* The replacement expression "\i{...}" output its results in reverse order.
-
-TextPad 8.6.0 (05-Apr-2021)
+    <releaseNotes>##TextPad 8.8.0 (1-Jun-2021)##
 
 Enhancements:
 
-* Implemented a new command to repeat the last characters typed. Its default shortcut is Ctrl+. (dot).
-* Speeded up the Replace All command to split very long lines of text.
-* Updated the keywords in the C++ syntax definition file for conformance with version 20.
+* Implements a context menu for inserting commands in the macro editor.
+* Supports the use of .editorconfig files.
 
 Issues resolved:
 
-* The Unicode code point U+FFFE is no longer treated as the end of a file.
-* Changes to Preferences were not written to disk until the program terminated.    
+* Changes to the scope of a macro using the macro editor were not saved.
+* Security policies for opening and saving files could be bypassed with the macro editor.
+* Added a new security policy setting to disallow the editing of macros (0x0800).
+* The last line of a document could be partially obscured, when word-wrap was enabled.
     </releaseNotes>
   </metadata>
   <files>
