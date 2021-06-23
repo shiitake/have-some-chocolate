@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>sqlpackage</id>
-    <version>18.7</version>
+    <version>18.7.1</version>
     <title>SqlPackage</title>
     <authors>Microsoft</authors>
     <owners>Shannon Barrett</owners>
@@ -20,37 +20,16 @@
     <summary>SqlPackage is a command-line utility that automates database development tasks</summary>
     <releaseNotes># Features  
 
- - Deployment:  Extract/Publish Big Data to/from Azure Storage. For more info, see SqlPackage for Big Data  
- - Azure Synapse Analytics:  Row level security support (inline table valued function, security policy, security predicate)  
- - Azure Synapse Analytics:  Workload classification support  
- - Azure SQL Edge:  External streaming job support  
- - Azure SQL Edge:  Added table and database options for data retention.  
- - Import:  Added 2 new index option properties for import operation. DisableIndexesForDataPhase (Disable indexes before importing data into SQL Server, default true) and RebuildIndexesOfflineForDataPhase (Rebuild indexes offline after importing data into SQL Server, default false)  
- - Logging:  Added property for all operations (HashObjectNamesInLogs) that will turn all object names into a hash string in log messages.  
- - Performance:  Improvements to import and export performance, including additional logging to assist in determining additional bottlenecks.  
- - SQLCMD:  Added property for Deployment and Schema Compare (DoNotEvaluateSqlCmdVariables) that specifies whether SQLCMD variables will be replaced with values.  
+ - Auditing:  Adds support for EXTERNAL_MONITOR.
+ - Azure Synapse Analytics:  Adds support for PREDICT.
+ - Logging:  Adds SqlPackage version and architecture information to diagnostic log file. 
 
 # Fixes
 
- - Deployment:  Default MAXDOP changed from 0 to 8 for Azure SQL, updating schema model default in DacFx  
- - Schema Compare:  Stored procedures using OUT and OUTPUT keywords to be ignored as a difference  
- - Deployment:  Additional validation for Big Data tokens  
- - Build/Deployment:  Full schema model cleanup of temp external tables for final dacpac consistency.  
- - Build/Deployment:  Adding error handling and fixing non-Edge 150 RE.  
- - Import/Deployment:  Sequence value restored during deployment  
- - Deployment:  Fixed an issue where changing the compression option on clustered index caused the table to be recreated instead of alter index.  
- - Deployment:  Fixed an issue where a clustered columnstore index was dropped and recreated if table column changed.  
- - Deployment:  Fixed external users getting dropped and recreated during deployment.  
- - Schema Compare:  Fixed schema compare issue with external streaming job.  
- - Import:  Null reference exception raised when enabling ambient setting ReliableDdlEnabled scripting a deployment report.  
- - Deployment:  Fixed an issue where deployment steps containing system versioning would be created in the incorrect order.  
- - Deployment:  Fixed an issue where schema compare update or dacpac deploy failed due to target containing temporal tables.  
- - Deployment:  Reseeds identity value after deployment based on target's previous last value.  
+ - Export:  Fixed an issue where exporting a table with text or image in the first column would fail without a clustered index.
+ - Export:  Fixed an issue where exporting a table that has the order of columns in a statistic in a different order than the table create script would fail without a clustered index.
 
-# Known Issues  
-
- - Deployment:  The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported  
- - Deployment:  In an incremental deploy scenario when the user is dropping a temporal table along with dropping objects that are dependent on it, like functions, stored procs etc. the deployment can fail. The script generation order tries to turn off SYSTEM_VERSIONING on the table which is a pre-req for dropping the table, but the order of steps generated is incorrect. Workaround: Generate the deployment script, move the System_Versioning OFF step to just before the table being dropped and then run the script.</releaseNotes>
+    </releaseNotes>
     <tags>sqlpackage dacfx</tags>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <docsUrl>https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-ver15</docsUrl>
