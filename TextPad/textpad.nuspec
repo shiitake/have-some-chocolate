@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>8.8.0</version>
+    <version>8.8.1</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,19 +12,13 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.8.0 (1-Jun-2021)##
-
-Enhancements:
-
-* Implements a context menu for inserting commands in the macro editor.
-* Supports the use of .editorconfig files.
+    <releaseNotes>##TextPad 8.8.1 (13-Jun-2021)##
 
 Issues resolved:
 
-* Changes to the scope of a macro using the macro editor were not saved.
-* Security policies for opening and saving files could be bypassed with the macro editor.
-* Added a new security policy setting to disallow the editing of macros (0x0800).
-* The last line of a document could be partially obscured, when word-wrap was enabled.
+* Corrected a regression error in the Windows recovery manager interface.
+* Fixed file system error with //network/.editorconfig when opening files.
+* Fixed a crash while opening files on Windows 7 when .editorconfig was enabled.
     </releaseNotes>
   </metadata>
   <files>
