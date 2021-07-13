@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>    
+    <id>tsqllint</id>
+    <version>1.11.0</version>
+    <title>tsqllint</title>
+    <authors>Nathan Boyd, Douglas Wilson</authors>    
+    <projectUrl>https://github.com/tsqllint/tsqllint</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/tsqllint/tsqllint-vscode-extension/master/images/icon.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/tsqllint/tsqllint/master/LICENSE</licenseUrl>
+    <projectSourceUrl>https://github.com/tsqllint/tsqllint</projectSourceUrl>
+    <docsUrl>https://raw.githubusercontent.com/tsqllint/tsqllint/master/README.md</docsUrl>    
+    <tags>tsqllint</tags>
+    <summary>A linter for T-SQL</summary>
+    <description>TSQLLint is a tool for describing, identifying, and reporting the presence of anti-patterns in TSQL scripts.</description>
+    <releaseNotes>##TSQLLint 1.11.0 (2018-0514)##
+
+* Add inline compatibility level overrides
+* Add support for ignored rules within multi-line comment blocks
+* Remove external dependencies from TSQLLint.Core
+* Update non-sargable rule to ignore functions in join queries with multiple predicates. 
+* Update to allow Compatability-Level 140. 
+* Update version and release tooling.
+    </releaseNotes>    
+  </metadata>
+  <files>    
+    <file src="tools\**" target="tools" />    
+  </files>
+</package>
