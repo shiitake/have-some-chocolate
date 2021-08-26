@@ -6,14 +6,15 @@
     <title>tsqllint</title>
     <authors>Nathan Boyd, Douglas Wilson</authors>    
     <projectUrl>https://github.com/tsqllint/tsqllint</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/tsqllint/tsqllint-vscode-extension/master/images/icon.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/tsqllint/tsqllint-vscode-extension/84e8627df624413675db30b679076e0e218813c8/images/icon.png</iconUrl>
     <licenseUrl>https://raw.githubusercontent.com/tsqllint/tsqllint/master/LICENSE</licenseUrl>
     <projectSourceUrl>https://github.com/tsqllint/tsqllint</projectSourceUrl>
     <docsUrl>https://raw.githubusercontent.com/tsqllint/tsqllint/master/README.md</docsUrl>    
     <tags>tsqllint</tags>
+    <owners>shiitake</owners>    
     <summary>A linter for T-SQL</summary>
     <description>TSQLLint is a tool for describing, identifying, and reporting the presence of anti-patterns in TSQL scripts.</description>
-    <releaseNotes>##TSQLLint 1.11.0 (2018-0514)##
+    <releaseNotes>##TSQLLint 1.11.0 (2018-0514)
 
 * Add inline compatibility level overrides
 * Add support for ignored rules within multi-line comment blocks
