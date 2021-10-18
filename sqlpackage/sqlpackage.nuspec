@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>sqlpackage</id>
-    <version>18.7.1</version>
+    <version>18.8</version>
     <title>SqlPackage</title>
     <authors>Microsoft</authors>
     <owners>Shannon Barrett</owners>
@@ -20,14 +20,36 @@
     <summary>SqlPackage is a command-line utility that automates database development tasks</summary>
     <releaseNotes># Features  
 
- - Auditing:  Adds support for EXTERNAL_MONITOR.
- - Azure Synapse Analytics:  Adds support for PREDICT.
- - Logging:  Adds SqlPackage version and architecture information to diagnostic log file. 
+ - Export: Adds option VerifyExtraction to change behavior of schema model validation on export
+ - Azure SQL: Support for ledger database and tables, import and export
+ - Platform: Upgrade Microsoft.Data.SqlClient from 2.0.0 to 2.1.3 for .NET Core version
+ - Azure Synapse Analytics: Support for column encryption with symmetric key
+ - Azure Synapse Analytics: Support for column encryption with CREATE CERTIFICATE
+ - Azure Synapse Analytics: Support for MERGE statement
+ - Deployment: Variable parameterization for AE columns, new publish property IsAlwaysEncryptedParameterizationEnabled
+ - Deployment: Support for IgnoreWorkloadClassifiers and IgnoreDatabaseWorkloadGroups publish properties
+ - Deployment: Support for external language runtimes
+ - ScriptDOM: Support for ledger database and tables
+ - ScriptDOM: Support for INCLUDE columns in inline index definitions
+
 
 # Fixes
 
- - Export:  Fixed an issue where exporting a table with text or image in the first column would fail without a clustered index.
- - Export:  Fixed an issue where exporting a table that has the order of columns in a statistic in a different order than the table create script would fail without a clustered index.
+ - Deployment: Fixed an issue where external user deployment to Managed Instance would fail
+ - Deployment: Fix for deployment order involving temporal tables to drop dependencies before turning system versioning off
+ - Deployment: Fix for Always Encrypted deployment bug with error "Invalid object name '#tmpErrors'"
+ - Export: Validation for SqlPackage parameters ExcludeObjectType(s) and DoNotDropObjectType(s)
+ - Export: Fixed export failure when there are CDC objects in database by excluding
+ - Extract: Adds a retry to extract validation when first time fails due to race condition
+ - Import: Fixed occasional deadlocks when importing to Azure by setting MAXDOP to 1
+ - Import: Fixed import failure when temporal table has dependency on security policy with schema binding on
+ - Platform: DacFramework.msi is now signed by "Microsoft SQL Server Data-Tier Application Framework" instead of "SQL Server 2012"
+ - Platform: Default to large arrays in x64 SqlPackage, fixes some scenarios involving large databases
+ - Schema Compare: Fix for schema compare failing for equal databases with database scoped configurations
+ - Schema Compare: Fixed schema compare with columnstore indexes
+ - SQL Project: Fixed a bug with build error for "GRANT EXECUTE ANY EXTERNAL SCRIPT"
+ - SQL Project: Fixed a bug where database project with columnstore index and a (n)varchar(max) column builds successfully but fails at deployment
+ - SQL Project: Fixed unresolved reference warnings for table distribution columns within Stored Procedures
 
     </releaseNotes>
     <tags>sqlpackage dacfx</tags>
