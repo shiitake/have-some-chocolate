@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>8.8.1</version>
+    <version>8.9.0</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,13 +12,21 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.8.1 (13-Jun-2021)##
+    <releaseNotes>##TextPad 8.9.0 (07-Oct-2021)##
+
+Enhancements:
+
+* Optimized memory reuse when editing existing files.
+* Macro commands to open, save and insert files can now accept codepage numbers.
+* Enhanced syntax coloring of JSON files. Keys are now displayed in the color set for Keywords 2, and ',' and ':' in the color set for operators. true, false and null are recognized as values, and comments are highlighted.
+* Implemented touchscreen zooming.
 
 Issues resolved:
 
-* Corrected a regression error in the Windows recovery manager interface.
-* Fixed file system error with //network/.editorconfig when opening files.
-* Fixed a crash while opening files on Windows 7 when .editorconfig was enabled.
+* Line numbers in the file comparison window were truncated when displayed in certain fonts.
+* TextPad prevented Windows from restarting without manual intervention.
+* Fixed a crash when turning on word wrap after zooming in or out.
+
     </releaseNotes>
   </metadata>
   <files>
