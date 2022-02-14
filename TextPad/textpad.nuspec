@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>8.9.0</version>
+    <version>8.10.0</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,20 +12,21 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.9.0 (07-Oct-2021)##
+    <releaseNotes>##TextPad 8.10.0 (20-Jan-2022)##
 
 Enhancements:
 
-* Optimized memory reuse when editing existing files.
-* Macro commands to open, save and insert files can now accept codepage numbers.
-* Enhanced syntax coloring of JSON files. Keys are now displayed in the color set for Keywords 2, and ',' and ':' in the color set for operators. true, false and null are recognized as values, and comments are highlighted.
-* Implemented touchscreen zooming.
+* Clicking the middle mouse button on a document tab or the document selector now closes the corresponding document.
+* Macro names which are too long to fit in the Macro Properties dialog box are displayed in popup tip windows.
+* Now detects the C/C++ include path for Visual Studio 2022.
 
 Issues resolved:
 
-* Line numbers in the file comparison window were truncated when displayed in certain fonts.
-* TextPad prevented Windows from restarting without manual intervention.
-* Fixed a crash when turning on word wrap after zooming in or out.
+* The indent more/less buttons were swapped on the toolbar.
+* Fixed the requirement to specify the encoding on the Save As dialog box to make insert file and save selection work.
+* The option to replace Notepad does not work on Windows 11 so it is not available.
+* Breaking change: in macros, the display name, author, description, search and replace strings were not saved as Unicode characters. Macros saved with this release are not backwards compatible with previous releases.
+
 
     </releaseNotes>
   </metadata>
