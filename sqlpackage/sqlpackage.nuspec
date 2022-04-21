@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>sqlpackage</id>
-    <version>19.0</version>
+    <version>19.0.0.20220216</version>
     <title>SqlPackage</title>
     <authors>Microsoft</authors>
     <owners>Shannon Barrett</owners>
