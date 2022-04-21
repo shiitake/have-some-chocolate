@@ -4,8 +4,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'TextPad'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://www.textpad.com/file?path=v810/win32/txpeng8100-32.zip'
-$url64      = 'https://www.textpad.com/file?path=v810/x64/txpeng8100-64.zip'
+$url        = 'https://www.textpad.com/file?path=v811/win32/txpeng8110-32.zip'
+$url64      = 'https://www.textpad.com/file?path=v811/x64/txpeng8110-64.zip'
 $downloadedZip = Join-Path $toolsDir 'textpad.zip'
 $fileLocation = Join-Path $toolsDir 'setup.exe'
 
@@ -14,9 +14,9 @@ $packageArgs = @{
   filefullpath  = $downloadedZip
   url           = $url
   url64bit      = $url64
-  checksum      = '76A8743FB9339788FC94ADD828B94F3F3206C252F1FE351331DBAA4B6AC64B33'
+  checksum      = '5720E6B6E89D45C0A4DD7D32B8AB3E56E21C641656B734AA9041825807E0C523'
   checksumType  = 'sha256'
-  checksum64    = '57B642DADC8E14C6D3F4822BA7E78D5A3D6D7DDDB50647805B2E25156CD52D44'
+  checksum64    = '23D8CA9BEE3EBD9EFA2083056BAC95364791ACF33B29E8773C9B1F12AB14A872'
   checksumType64= 'sha256'
 }
 
