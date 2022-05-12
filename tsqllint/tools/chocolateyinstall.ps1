@@ -2,8 +2,8 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $softwareName = 'tsqllint'
-$url        = 'https://github.com/tsqllint/tsqllint/releases/download/v1.11.0/win-x86.tgz'
-$url64      = 'https://github.com/tsqllint/tsqllint/releases/download/v1.11.0/win-x64.tgz'
+$url        = 'https://github.com/tsqllint/tsqllint/releases/download/1.14.5/win-x86.tgz'
+$url64      = 'https://github.com/tsqllint/tsqllint/releases/download/1.14.5/win-x64.tgz'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -11,9 +11,9 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
   softwareName  = $softwareName
-  checksum      = '0A3A1B1D06F1E7887CE362DE827FACA05DEE956FFC099DFC401C9FF42C5DD29C'
+  checksum      = '15F8B386F5FE54194EDC7D555D0F856A41C25F780ABD43C819F218C85CD98A09'
   checksumType  = 'sha256'  
-  checksum64    = 'A1F5C6A8AD75871E7F3E7E2E941FD17E773CA7DCADA6128BF8C3597812DC5E89' 
+  checksum64    = 'B57061FFCA40FB69E547C7A25EDC35A65047CEB6C2491F7C7471C95BEBC81640' 
   checksumType64= 'sha256'
 }
 
