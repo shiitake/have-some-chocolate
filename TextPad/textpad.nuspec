@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>8.11.0</version>
+    <version>8.12.0</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,13 +12,22 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.11.0 (15-Mar-2022)##
+    <releaseNotes>##TextPad 8.12.0 (14-May-2022)##
+
+Enhancements:
+
+* The Find Next in All Documents command now steps through all open documents.
+* The syntax highlighter now recognises C++ binary literals, and Unicode and raw string literals.
 
 Issues resolved:
 
-* Fixed a crash in Replace All commands that did hundreds ofline insertions and deletions.
-* The shortcuts for characters Ÿ, œ and Œ on Qwerty keyboards did not work.
-* Selecting a whole line and then typing characters over it could not be undone.
+* The Block Fill command didn't insert right aligned text correctly.
+* Lines could be wrapped at seemingly random places.
+* Repeat typing didn't allow for any white space that is automatically inserted after return is pressed.
+* Repeat typing only worked with Unicode characters in the Basic Multilingual Plane.
+* The EditUnicodeChar command only worked with Unicode characters in the Basic Multilingual Plane.
+* Character code popup tips showed incorrect codes for surrogate pairs and they only worked on the left side of wide characters.
+* The cursor position indicator now takes account of wide characters.
 
     </releaseNotes>
   </metadata>
