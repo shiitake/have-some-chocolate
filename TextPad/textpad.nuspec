@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>8.12.0</version>
+    <version>8.14.0</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,23 +12,32 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.12.0 (14-May-2022)##
+    <releaseNotes>##TextPad 8.14.0 (8-Nov-2022)##
 
 Enhancements:
 
-* The Find Next in All Documents command now steps through all open documents.
-* The syntax highlighter now recognises C++ binary literals, and Unicode and raw string literals.
+* Improved the speed of the Replace All command, the Bookmark All command, and the Clear and Invert All Bookmarks commands.
+* Improved the speed of Undo/Redo of the Replace All command.
+* Show the document class name on the Document Properties page.
 
 Issues resolved:
 
-* The Block Fill command didn't insert right aligned text correctly.
-* Lines could be wrapped at seemingly random places.
-* Repeat typing didn't allow for any white space that is automatically inserted after return is pressed.
-* Repeat typing only worked with Unicode characters in the Basic Multilingual Plane.
-* The EditUnicodeChar command only worked with Unicode characters in the Basic Multilingual Plane.
-* Character code popup tips showed incorrect codes for surrogate pairs and they only worked on the left side of wide characters.
-* The cursor position indicator now takes account of wide characters.
+* Commands added to the Tools menu could not be renamed.
+* Could not paste multiple lines into edit boxes on the Find and Replace dialog boxes.
+* Context sensitive help did not work for some contexts.
+* When the foreground and background colors were the same, the current line should not have been highlighted with a box.
+* Fixed a crash when running a Replace All command which reduced the number of lines in selected text up to the end of the document.
+* Fixed a crash caused by closing the Find dialog box while an error message about the regular expression is displayed.
 
+##TextPad 8.13.0 (10-Oct-2022)##
+
+Issues resolved:
+
+* Prevented a memory exception from causing a crash when adding text to the clipboard history on memory constrained systems.
+* The IME window was misplaced after character conversion.
+* Implemented the following keyboard shortcut to toggle the case of the incremental finder: "IncrementalMatchCase".
+* After splitting a view, the size of the scrollbar thumb was incorrect in the new view.
+* Macros could not be edited with the 32-bit edition.
     </releaseNotes>
   </metadata>
   <files>
