@@ -12,7 +12,17 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.14.0 (8-Nov-2022)##
+    <releaseNotes>##TextPad 8.14.2 (22-Nov-2022)##
+Issues resolved:
+
+* In certain circumstances, the Replace All command could lose its place after 5000 replacements.
+* Spaces should not have been rejected in document class names.
+* The Match Case button on the Incremental Finder did not work.
+* Improved the algorithm which determines if foreground and background colors are too similar to be visible.
+* Could not insert more than one separator on the Tools menu.
+* The text cursor width was not scaled for high resolution displays.
+
+##TextPad 8.14.0 (8-Nov-2022)##
 
 Enhancements:
 
