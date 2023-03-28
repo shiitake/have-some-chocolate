@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>textpad</id>
+    <version>9.1.0</version>
+    <title>TextPad</title>
+    <authors>Helios Software Solutions</authors>
+    <owners>Shannon Barrett</owners>
+    <projectUrl>http://textpad.com/products/textpad/index.html</projectUrl>
+    <tags>textpad helios text editor admin trial</tags>
+    <summary>A general purpose text editor</summary>
+    <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
+    <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
+    <description>TextPad is a powerful, general purpose editor for plain text files. </description>
+    <releaseNotes>##TextPad 9.1.0 (27-Feb-2023)##
+Enhancements:
+
+* An optional regular expression builder for the Find and Replace commands. Select this on Configure » Preferences » Editor.
+* A user interface to manage history lists. See the Configure menu.
+* An option to display a Windows navigator when switching between documents with Ctrl+tab. Select this on Configure » Preferences » View.
+* An option to use the Windows standard file open dialogs for users who require more functionality than is available from the themed ones. Select this on Configure » Preferences » File.
+
+Issues resolved:
+
+* When TextPad was not running and several files were opened at the same time from Windows Explorer, the first failed to open.
+* The option to display tabs at the bottom of the window did not persist.
+* The option to create new document tabs to the right of existing ones was not available.
+* The docked Search Results window could obscure documents.
+* Characters could not be input by typing their codes on the numeric keypad while the Alt key was pressed.
+* The limit of 256 characters for file names in the open file dialog has been increased.
+* Menus could temporarily disappear when using the Alt and down-arrow keys.
+* The window background color in the dark theme could not be changed.
+* The selected clip library was not reselected after a restart.
+* See also version 8.16.0.
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
