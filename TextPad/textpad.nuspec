@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>8.14.0</version>
+    <version>8.16.0</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,15 +12,26 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 8.14.2 (22-Nov-2022)##
+    <releaseNotes>##TextPad 8.16.0 (27-Feb-2023)##
+Enhancements:
+
+* A user interface to manage history lists. See the Configure menu.  
+
 Issues resolved:
 
-* In certain circumstances, the Replace All command could lose its place after 5000 replacements.
-* Spaces should not have been rejected in document class names.
-* The Match Case button on the Incremental Finder did not work.
-* Improved the algorithm which determines if foreground and background colors are too similar to be visible.
-* Could not insert more than one separator on the Tools menu.
-* The text cursor width was not scaled for high resolution displays.
+* The scrolling and cursor positions were not updated after undoing or redoing edits.
+* The initial selection was lost after drag selecting backwards and forward from a word selected by double clicking it.
+* Corrected the behaviour of "indent_size" and "tab_width" to match EditorConfig standard 0.15.0.
+* The spell checker option to ignore capitalised words also affected words in mixed case and all capitals.
+* When Explorer opens multiple files associated with TextPad they will now open in a single instance, if the association is made using Configure » Preferences » Associated Files.
+
+##TextPad 8.14.2 (8-Nov-2022)##
+
+Enhancements:
+
+* Improved the speed of the Replace All command, the Bookmark All command, and the Clear and Invert All Bookmarks commands.
+* Improved the speed of Undo/Redo of the Replace All command.
+* Show the document class name on the Document Properties page.
 
 ##TextPad 8.14.0 (8-Nov-2022)##
 
