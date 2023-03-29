@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>sqlpackage</id>
-    <version>161.6374.0</version>
+    <version>161.8089.0</version>
     <title>SqlPackage</title>
     <authors>Microsoft</authors>
     <owners>Shannon Barrett</owners>
@@ -23,24 +23,22 @@
     <summary>SqlPackage is a command-line utility that automates database development tasks</summary>
     <releaseNotes>### Features  
 
-- Platform: Changes connections to use encryption and not trust the server certificate by default. This is a breaking change for connections using self-signed certificates or without encryption by default. For more information, see this dedicated article.
-- Platform: References Microsoft.Data.SqlClient v5.0.1
-- Platform: SqlPackage is now available for installation as a dotnet tool for Windows, macOS, and Linux platforms.
-- Always Encrypted: Adds support for VBS (Virtualization-based security) with secure enclaves.
-- Connectivity: Adds support for TDS 8.0 and parameters for /SourceHostNameInCertificate and /TargetHostNameInCertificate to SqlPackage operations.
-- Replication: Adds support for sp_addpublication with peer-to-peer replication.
-- ScriptDOM: Adds support for IS NOT DISTINCT FROM syntax with predicate subqueries.
-- Server-level roles: Adds support for additional fixed server roles: MS_DatabaseConnector, MS_LoginManager, MS_DatabaseManager, MS_ServerStateManager, MS_ServerStateReader, MS_ServerPerformanceStateReader, MS_ServerSecurityStateReader, MS_DefinitionReader, MS_PerformanceDefinitionReader, MS_SecurityDefinitionReader.
-- SQL Server 2022: Adds support for T-SQL function changes associated with SQL Server 2022: GREATEST(), LEAST(), STRING_SPLIT(), DATETRUNC(), LTRIM(), RTRIM(), and TRIM().
-- SQL Server 2022: Adds support for JSON function changes associated with SQL Server 2022: ISJSON(), JSON_PATH_EXISTS(), JSON_OBJECT(), and JSON_ARRAY().
-- SQL Server 2022: Adds support for bit manipulation functions associated with SQL Server 2022: LEFT_SHIFT(), RIGHT_SHIFT(), BIT_COUNT(), GET_BIT(), and SET_BIT().
-- SQL Server 2022: Adds support for time series function changes associated with SQL Server 2022: DATE_BUCKET(), GENERATE_SERIES(), FIRST_VALUE(), and LAST_VALUE().
-- Statistics: Adds support for STATISTICS AUTO_DROP option.
-- XML compression: Adds support for XML compression on XML indexes.
+- Deployment: Adds the ability for GenerateSmartDefaults property on publish to populate values from a default constraint when set to true. 
+- Azure Synapse Analytics: Adds support for serverless SQL pools in Extract and Publish operations.
+- SQL Server 2022: Adds support for ordered clustered columnstore indexes.
 
 ### Fixes
 
-N/A
+- Deployment: The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported.
+- Deployment: Fixes an issue where publish to SQL on Linux would fail due to the default data and log paths being empty. GitHub issue
+- Deployment: Fixes an issue where publishing an external table with file format changes would result in an error. GitHub issue
+- Deployment: Fixes an issue where publish with a column encrypted with randomized encryption would not fail immediately if the column encryption key (CEK) was inaccessible, delaying the deployment error until the column encryption step.
+- Refactor: Fixes an issue where a renamed column on a system versioned table would result in the system versioning being turned off and not turned back on. GitHub issue
+- Platform: Fixes an issue where SqlPackage operations would fail on RHEL 9 due to an encryption error. Moves to use the 6.0.10 version of the .NET 6 runtime. GitHub issue
+- Schema compare: Fixes an issue where the DoNotEvaluateSqlCmdVariables property for Publish and Script would result in the SqlCmd variables also not being evaluated on both the source and target instead of only the source.
+- ScriptDOM: Fixes external table support for REJECT_SAMPLE_VALUE.
+- ScriptDOM: Fixes an issue where compression options could not be applied to a table with a clustered index.
+- SQL projects: Fixes an issue where valid options for the QueryStoreFlushInterval are incorrectly reported as invalid. Developer Community report
 
 ### Known Issues
 
@@ -50,7 +48,7 @@ N/A
     </releaseNotes>
     <tags>sqlpackage dacfx</tags>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
-    <docsUrl>https://docs.microsoft.com/en-us/sql/tools/sqlpackage?view=sql-server-ver15</docsUrl>
+    <docsUrl>https://learn.microsoft.com/en-us/sql/tools/sqlpackage/sqlpackage?view=sql-server-ver16</docsUrl>
   </metadata>
     <files>    
       <file src="tools\**" target="tools" />    
