@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'TextPad'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64      = 'https://www.textpad.com/file?path=v91/setupv9.exe'
+$url64      = 'https://www.textpad.com/file?path=v9/setupv9.exe'
 $fileLocation = Join-Path $toolsDir 'setupv9.exe'
 
 $packageArgs = @{
