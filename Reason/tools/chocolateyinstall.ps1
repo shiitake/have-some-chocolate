@@ -2,8 +2,8 @@
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://a.phcdn.se/update/Stable/Reason_1251_d41-Stable-562-Win.zip' 
-$downloadedZip = Join-Path $toolsDir 'Reason_1251_d41-Stable-562-Win.zip'
+$url        = 'https://cdn.reasonstudios.com/update/Stable/Reason_1274_d3-Stable-820-Win.zip' 
+$downloadedZip = Join-Path $toolsDir 'Reason_1274_d3-Stable-820-Win.zip'
 $fileLocation = Join-Path $toolsDir 'Install Reason 12.exe'
 
 $packageArgs = @{
@@ -13,7 +13,7 @@ $packageArgs = @{
   fileType      = 'exe'
   url           = $url  
   softwareName  = 'Reason' 
-  checksum      = '3BE911D32F0337A4A0CA6C63F74959671E9E81926A7577AD25972AAF879DEE7B'
+  checksum      = 'AD70D9451D077B13B5B532591F659790C261B3F9DC6894D338CC3302C7E0D203'
   checksumType  = 'sha256'  
   validExitCodes= @(0) 
 }
