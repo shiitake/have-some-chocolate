@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>9.1.0</version>
+    <version>9.5.0</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,26 +12,23 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 9.1.0 (27-Feb-2023)##
+    <releaseNotes>##TextPad 9.5.0 (9-Jun-2024)##
 Enhancements:
 
-* An optional regular expression builder for the Find and Replace commands. Select this on Configure » Preferences » Editor.
-* A user interface to manage history lists. See the Configure menu.
-* An option to display a Windows navigator when switching between documents with Ctrl+tab. Select this on Configure » Preferences » View.
-* An option to use the Windows standard file open dialogs for users who require more functionality than is available from the themed ones. Select this on Configure » Preferences » File.
+* More themes are available for customizing the appearance of the user interface.
+* Scripts in languages such as Python, PHP and awk can now be used to edit documents. For more information, see "HOWTOs" in the forum.
 
 Issues resolved:
 
-* When TextPad was not running and several files were opened at the same time from Windows Explorer, the first failed to open.
-* The option to display tabs at the bottom of the window did not persist.
-* The option to create new document tabs to the right of existing ones was not available.
-* The docked Search Results window could obscure documents.
-* Characters could not be input by typing their codes on the numeric keypad while the Alt key was pressed.
-* The limit of 256 characters for file names in the open file dialog has been increased.
-* Menus could temporarily disappear when using the Alt and down-arrow keys.
-* The window background color in the dark theme could not be changed.
-* The selected clip library was not reselected after a restart.
-* See also version 8.16.0.
+* If a workspace containing modified new documents was open at the time Windows Update automatically restarted the operating system, when TextPad was restarted, it reported that it could not save backup files for each of the new documents.
+* When Windows Update recovered modified files on restart, a separate prompt to reload the file should not have been issued.
+* In HTML files, numbers were not syntax highlighted.
+* The target document should have been activated when the Tool Output window was closed.
+* The dialog box for Manage History Lists could not be resized vertically.
+* The Save Configuration command did not save the selected appearance.
+* If the option to "Minimize when last document is closed" was set, TextPad was minimized when switching workspaces.
+* Macro commands to change the case of selected text only changed the first character, if the default scope of the macro was "Selection".
+* Copying text within a single line in block mode should not have appended a newline character.
     </releaseNotes>
   </metadata>
   <files>
