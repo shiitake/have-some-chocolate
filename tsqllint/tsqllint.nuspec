@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>tsqllint</id>
-    <version>1.15.3</version>
+    <version>1.16.0</version>
     <title>tsqllint</title>
     <authors>Nathan Boyd, Douglas Wilson</authors>    
     <projectUrl>https://github.com/tsqllint/tsqllint</projectUrl>
@@ -14,7 +14,7 @@
     <owners>shiitake</owners>    
     <summary>A linter for T-SQL</summary>
     <description>TSQLLint is a tool for describing, identifying, and reporting the presence of anti-patterns in TSQL scripts.</description>
-    <releaseNotes>##TSQLLint 1.15.3 (2022-0222)</releaseNotes>    
+    <releaseNotes>##TSQLLint 1.16.0</releaseNotes>    
   </metadata>
   <files>    
     <file src="tools\**" target="tools" />    
