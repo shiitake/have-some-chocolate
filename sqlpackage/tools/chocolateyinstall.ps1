@@ -2,13 +2,14 @@
 $ErrorActionPreference = 'Stop';
 $packageName = 'SqlPackage'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64        = 'https://go.microsoft.com/fwlink/?linkid=2224909'
+$url64        = 'https://go.microsoft.com/fwlink/?linkid=2261576'
+
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir  
   url64bit      = $url64
   softwareName  = 'sqlpackage*'
-  checksum64    = 'C542B166CDE0DFFACD0BBA37D5FBD47B8D9496B36C06CABD147E30CD36A0D1EF'
+  checksum64    = 'D0C97E192BF7F575CB7A65763B7F70F28135FFE460FB2AAB3CE1F1D9D20066A1'
   checksumType64= 'sha256'
 }
 
