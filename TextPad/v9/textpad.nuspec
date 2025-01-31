@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>textpad</id>
-    <version>9.1.0</version>
+    <version>9.7.0</version>
     <title>TextPad</title>
     <authors>Helios Software Solutions</authors>
     <owners>Shannon Barrett</owners>
@@ -12,26 +12,22 @@
     <iconUrl>https://cdn.rawgit.com/shiitake/have-some-chocolate/master/TextPad/icon.png</iconUrl>
     <packageSourceUrl>https://github.com/shiitake/have-some-chocolate</packageSourceUrl>
     <description>TextPad is a powerful, general purpose editor for plain text files. </description>
-    <releaseNotes>##TextPad 9.1.0 (27-Feb-2023)##
+    <releaseNotes>##TextPad 9.7.0 (17-Jan-2025)##
 Enhancements:
 
-* An optional regular expression builder for the Find and Replace commands. Select this on Configure » Preferences » Editor.
-* A user interface to manage history lists. See the Configure menu.
-* An option to display a Windows navigator when switching between documents with Ctrl+tab. Select this on Configure » Preferences » View.
-* An option to use the Windows standard file open dialogs for users who require more functionality than is available from the themed ones. Select this on Configure » Preferences » File.
+* Added a configuration options to make File Explorer open files in the new instances of Textpad.
+* The Quick Open command now expands environment variables such as %APPADATA%, and its dialog box is resizable.
+* The folder used for automatic saves is now the same as the one specified for backups.
+* When TextPad 9 is run as administrator, the user account control shield is displayed on the statusbar.
 
 Issues resolved:
 
-* When TextPad was not running and several files were opened at the same time from Windows Explorer, the first failed to open.
-* The option to display tabs at the bottom of the window did not persist.
-* The option to create new document tabs to the right of existing ones was not available.
-* The docked Search Results window could obscure documents.
-* Characters could not be input by typing their codes on the numeric keypad while the Alt key was pressed.
-* The limit of 256 characters for file names in the open file dialog has been increased.
-* Menus could temporarily disappear when using the Alt and down-arrow keys.
-* The window background color in the dark theme could not be changed.
-* The selected clip library was not reselected after a restart.
-* See also version 8.16.0.
+* Missing quick key for the Change Case command on the edit context menu.
+* Fixed a deadlock when saving a file while it was being checked for modification by another process.
+* Fixed a crash when configuring macros and there were more than 64 *.tpm files.
+* Fixed a problem with text sometimes not being found in very large files.
+* In version 9, the option to add JDK commands to the Tools menu did not work.
+* In version 9, when the macro editor dialog box was resized vertically, its pushbuttons were not moved.
     </releaseNotes>
   </metadata>
   <files>
